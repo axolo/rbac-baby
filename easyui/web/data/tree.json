@@ -1,0 +1,27 @@
+[{
+  "title": "首页",
+  "text": "首页",
+  "href": "home",
+  "iconCls": "icon-house",
+  "children": [{
+    "title": "菜单11",
+    "text": "菜单11",
+    "children": [{
+      "title": "菜单111",
+      "text": "菜单111"
+    }, {
+      "title": "tab1",
+      "text": "TAB1",
+      "href": "tab1"
+    }]
+  }, {
+    "title": "菜单12",
+    "text": "菜单12"
+  }]
+}, {
+  "title": "帐号管理",
+  "text": "帐号管理",
+  "href": "account",
+  "method": "get",
+  "iconCls": "icon-group"
+}]

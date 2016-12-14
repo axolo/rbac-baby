@@ -1,0 +1,11 @@
+{
+  "app-name": "api.woodso.com",
+  "app-version": "0.0.1",
+  "app-status": "open",
+  "dsn": "mongodb://api.woodso.com/com_woodso_www",
+  "rbac": false,
+  "cors": true,
+  "upload": {
+    "path": "./files"
+  }
+}

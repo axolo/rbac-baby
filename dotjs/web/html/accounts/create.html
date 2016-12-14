@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>创建帐号</title>
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+
+  <h3>创建帐号</h3>
+
+  <div id="accounts-create">
+    <form class="form">
+      <div>
+        <label for="id">帐号</label>
+        <input type="text" name="id">
+      </div>
+      <div>
+        <label for="password">密码</label>
+        <input type="password" name="password">
+      </div>
+      <div>
+        <label for="name">昵称</label>
+        <input type="text" name="name">
+      </div>
+      <div>
+        <label for="mail">邮箱</label>
+        <input type="text" name="mail">
+      </div>
+      <div>
+        <label for="phone">手机</label>
+        <input type="text" name="phone">
+      </div>
+      <div id="roles-list"><script type="text/x-template-dot" id="data">
+        <label for="roles">角色</label>{{ for(var i=0,l=it.length;i<l;i++){ }}
+        <input type="checkbox" name="roles" value={{=it[i].name}}>{{=it[i].nick}}{{ } }}</script>
+      </div>
+      <div>
+        <label for="create"></label>
+        <input type="button" name="create" value="创建帐号">
+      </div>
+    </form>
+  </div>
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/dot/1.0.3/doT.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/accounts/create.js"></script>
+</body>
+</html>

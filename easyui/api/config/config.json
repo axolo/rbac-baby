@@ -1,0 +1,21 @@
+{
+  "name": "oa.woodso.com",
+  "version": "0.0.1",
+  "support": "zergdo@gmail.com",
+  "cors": "*",
+  "async": true,
+  "gzip": true,
+  "closed": false,
+  "debug": true,
+  "rbac": true,
+  "storage": {
+    "engine": "mssql",
+    "dsn": "mssql://sa:google@localhost/com_woodso_oa"
+  },
+  "upload": {
+    "path": "/files/"
+  },
+  "page" : {
+    "rows": 20 
+  }
+}

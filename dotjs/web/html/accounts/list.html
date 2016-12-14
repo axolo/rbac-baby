@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>帐号列表</title>
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+
+  <h3>帐号列表</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th><input type="checkbox" name="checkall"></th>
+        <th>更新</th>
+        <th>帐号</th>
+        <th>昵称</th>
+        <th>邮箱</th>
+        <th>手机</th>
+        <th>状态</th>
+        <th>角色</th>
+        <th>创建</th>
+        <th>到期</th>
+      </tr>
+    </thead>
+    <tbody id="accounts-list"><script type="text/x-dot-template" id="data">{{ for(var i=0,l=it.length;i<l;i++){ }}
+      <tr>
+        <td><input type="checkbox" name="id" value="{{=it[i].id}}"></td>
+        <td><a href="update.html?id={{=it[i].id}}">更新</a></td>
+        <td><a href="get.html?id={{=it[i].id}}">{{=it[i].id}}</a></td>
+        <td>{{=it[i].name}}</td>
+        <td>{{=it[i].mail}}</td>
+        <td>{{=it[i].phone}}</td>
+        <td>{{=it[i].status}}</td>
+        <td>{{=it[i].roles.join(', ')}}</td>
+        <td>{{=it[i].created}}</td>
+        <td>{{=it[i].expried}}</td>
+      </tr>{{ } }}</script>
+    </tbody>
+  </table>
+
+  <div>
+    <button name="delete">删除所选</button>
+    <a href="create.html"><button name="create">创建帐号</button></a>
+  </div>
+
+  <div class="page">
+    <ul class="pagination" id="pagination"><script type="text/template" id="page">{{for(var i=1,l=Math.ceil(it.totalRows/it.rowsPerPage);i<=l;i++){ }}
+      <li{{=it.currentPage==i?' class="active"':''}}><a href="?page={{=i}}">{{=i}}</a></li>{{ } }}
+      <li>[Total:{{=it.totalRows}}]</li></script>
+    </ul>
+  </div>
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/dot/1.0.3/doT.min.js"></script>
+<script src="../../js/libs/jQuery.QueryString/jquery.querystring.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/accounts/list.js"></script>
+</body>
+</html>

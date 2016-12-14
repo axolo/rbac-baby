@@ -1,0 +1,30 @@
+{
+  "name": "oa.woodso.com",
+  "version": "0.0.1",
+  "support": "zergdo@gmail.com",
+  "cors": "*",
+  "gzip": true,
+  "closed": false,
+  "debug": true,
+  "rbac": true,
+  "storage": {
+    "engine": "mssql",
+    "dsn": "mssql://sa:google@localhost/com_woodso_oa"
+  },
+  "upload": {
+    "path": "/files/"
+  },
+  "page" : {
+    "rows": 20 
+  },
+  "status": {
+    "err600": { "code": "600", "message": "Unparseable Response Headers", "content": "服务关闭。"},
+    "err500": { "code": "500", "message": "Internal Server Error", "content": "服务器错误。" },
+    "err423": { "code": "423", "message": "Locked", "content": "资源被锁定。" },
+    "err405": { "code": "405", "message": "Method Not Allowed", "content": "请求方法不被允许。" },
+    "err404": { "code": "404", "message": "Not Found", "content": "未找到资源。" },
+    "err403": { "code": "403", "message": "Forbidden", "content": "禁止访问。"  },
+    "err401": { "code": "401", "message": "Unauthorized", "content": "没有权限。" },
+    "err400": { "code": "400", "message": "Bad Request", "content": "请求错误。" }
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>资源列表</title>
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+
+  <h4>资源列表</h4>
+  <table>
+    <thead>
+      <tr>
+        <th><input type="checkbox" name="checkall"></th>
+        <th>昵称</th>
+        <th>级别</th>
+        <th>名称</th>
+        <th>方法</th>
+      </tr>
+    </thead>
+    <tbody id="resources-list"><script type="text/x-dot-template" id="data">{{ for(var i=0, l=it.length; i<l; i++) { }}
+      <tr>
+        <td><input type="checkbox" name="name" value="{{=it[i].name}}"></td>
+        <td>{{=it[i].nick}}</td>
+        <td>{{=it[i].level}}</td>
+        <td><a href="update.html?name={{=it[i].name}}">{{=it[i].name}}</a></td>
+        <td>{{ for(var j=0,m=it[i].action.length;j<m;j++){ }}<span class="col">{{=it[i].action[j]}}</span>{{ } }}</td>
+      </tr>{{ } }}</script>
+    </tbody>
+  </table>
+
+  <div>
+    <button name="delete">删除所选</button>
+    <a href="create.html"><button name="create">创建资源</button></a>
+  </div>
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/dot/1.0.3/doT.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/resources/list.js"></script>
+</body>
+</html>

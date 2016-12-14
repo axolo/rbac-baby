@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>更新资源</title>
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+
+  <h3>更新资源</h3>
+
+  <div id="resources-update"><script type="text/x-dot-template" id="data">
+    <form class="form">
+      <div>
+        <label for="name">名称</label>
+        <input type="text" name="name" value="{{=it.name}}" disabled>
+      </div>
+      <div>
+        <label for="level">级别</label>
+        <input type="radio" name="level" value="kernel"{{=(it.level=='kernel'?' checked':'')}}>核心
+        <input type="radio" name="level" value="plugin"{{=(it.level=='plugin'?' checked':'')}}>插件
+        <input type="radio" name="level" value="app"{{=(it.level=='app'?' checked':'')}}>应用
+      </div>
+      <div>
+        <label for="nick">昵称</label>
+        <input type="text" name="nick" value="{{=it.nick}}">
+      </div>
+      <div>
+        <label for="action">方法</label>{{ for(var i=0,l=it.action.length;i<l;i++){ }}
+        <div class="one-more">
+          <input type="text" name="action" value="{{=it.action[i]}}">
+          <button type="button" name="action-remove">删除</button>
+        </div>{{ } }}
+      </div>
+      <div>
+        <button type="button" name="action-add">添加方法</button>
+        <button type="button" name="update">更新资源</button>
+      </div>
+    </form></script>
+  </div>
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/dot/1.0.3/doT.min.js"></script>
+<script src="../../js/libs/jQuery.QueryString/jquery.querystring.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/resources/update.js"></script>
+</body>
+</html>

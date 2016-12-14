@@ -1,0 +1,63 @@
+* {
+  font-family: 
+    "Microsoft YaHei UI",
+    "Microsoft YaHei",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    "Hiragino Sans GB",
+    "Hiragino Sans GB W3",
+    "WenQuanYi Micro Hei",
+    sans-serif;
+  font-size: 14px;
+}
+
+.easyui-tabs .tabs-text {
+  padding: 15px;
+}
+
+.datagrid-header-row {
+  font-size: 25px;
+}
+
+
+/* 解决使用FontAwesome错位，使用方法：class="fa-icon fa fa-user" */
+.fa-icon {
+  padding-top: 3px;
+}
+
+.layout {
+
+}
+
+.layout-north {
+  height: 30px;
+}
+
+.layout-west {
+  width: 200px;
+}
+
+.layout-center {
+  
+}
+
+.layout-east {
+  width: 200px;
+}
+
+.layout-south {
+  height: 20px;
+  padding-top: 2px;
+  vertical-align: middle;
+  text-align:center;
+}
+
+.layout-south address {
+  font-size: 0.9em;
+}
+
+.debug {
+  background-color: red;
+  border: 1px solid gray;
+}

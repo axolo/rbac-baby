@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="IT,运维,网管,网络管理,信息技术,运行维护">
+  <meta name="description" content="木秀——小微企业IT运维专家">
+  <title>www.woodso.com</title>
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+
+  <h3>www.woodso.com</h3>
+
+  <ul>
+    <li id="sign-info"><script type="text/template" id="info">
+      <ul class="inline">{{ if(it.token){ }}
+        <li><a href="html/sign/info.html?id={{=it.id}}">{{=it.id}}</a></li>
+        <li><a href="html/sign/out.html">signout</a></li>{{ } else { }}
+        <li><a href="html/sign/in.html">signin</a>(amdin:123456)</li>
+        <li><a href="html/sign/up.html">signup</a>(CLOSED!)</li>
+      </ul>{{ } }}</script>
+    </li>
+    <li><a href="html/accounts/list.html">accounts</a></li>
+    <li><a href="html/resources/list.html">resources</a></li>
+    <li><a href="html/roles/list.html">roles</a> (with authorization)</li>
+    <li>attachments
+      <ul>
+        <li><a href="html/attachments/download.html">download</a> (list)</li>
+        <li><a href="html/attachments/upload.html">upload</a></li>
+        <li><a href="html/attachments/update.html">update</a></li>
+        <li><a href="html/attachments/delete.html">delete</a></li>
+      </ul>
+    </li>
+    <li>organization (alias position?)
+      <ul>
+        <li>create</li>
+        <li>list</li>
+        <li>chart</li>
+        <li>update</li>
+        <li>delete</li>
+        <li>kpi</li>
+        <li>obit</li>
+      </ul>
+    </li>
+    <li>empolyees
+      <ul>
+        <li>create</li>
+        <li>list</li>
+        <li>get by id</li>
+        <li>update</li>
+        <li>delete</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+  <address>&copy;2015, woodso.com.</address>
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/js-cookie/2.0.3/js.cookie.min.js"></script>
+<script src="//cdn.bootcss.com/dot/1.0.3/doT.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+<script src="js/libs/baidu/baidu-hm.js"></script>
+<script src="js/libs/google/google-ga.js"></script>
+</body>
+</html>

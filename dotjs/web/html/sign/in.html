@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>/sign/in</title>
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+
+  <div class="float-right" id="sign-info"><script type="text/x-dot-template" id="info">
+    <ul class="inline">{{ if(it.token){ }}
+      <li><a href="../accounts/id.html?id={{=it.id}}">{{=it.id}}</a></li>
+      <li><a href="out.html">退出</a></li>{{ } else { }}
+      <li><a href="in.html">登录</a></li>
+    </ul>{{ } }}</script>
+  </div>
+
+  <h4>登录</h4>
+
+  <form id="signin" class="form">
+    <div>
+      <label for="id">帐号</label>
+      <input type="text" name="id">
+    </div>
+    <div>
+      <label for="password">密码</label>
+      <input type="password" name="password">
+    </div>
+    <div>
+      <label for="signin"></label>
+      <input type="button" name="signin" value="登录">
+    </div>
+  </form>
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/js-cookie/2.0.3/js.cookie.min.js"></script>
+<script src="//cdn.bootcss.com/dot/1.0.3/doT.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/sign/in.js"></script>
+</body>
+</html>

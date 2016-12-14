@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>授权列表</title>
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+
+  <h4>授权列表</h4>
+
+  <ul id="roles-list" class="inline"><script type="x-dot-template" id="roles">
+    <li class="title">角色</li>{{ for(var i=0,l=it.length;i<l;i++) { }}
+    <li{{=(it[i].name==$.Querystring('role')?' class="active"':'')}}><a href="?role={{=it[i].name}}">{{=it[i].name}}</a></li>{{ } }}</script>
+  </ul>
+  
+  <table>
+    <thead>
+      <tr>
+        <th><input type="checkbox" id="checkall"></th>
+        <th>资源</th>
+        <th>方法</th>
+      </tr>
+    </thead>
+    <tbody id="resources-list"><script type="x-dot-template" id="resources">{{ for(var i=0,l=it.length;i<l;i++){ }}
+      <tr>
+        <td><input type="checkbox" name="action-all" value=""></td>
+        <td>{{=it[i].name}}</td>
+        <td>{{ for(var j=0,m=it[i].action.length;j<m;j++){ }}
+          <span class="col"><input type="checkbox" name="roles" value="{{=it[i].name}}/{{=it[i].action[j].name}}"{{=(it[i].action[j].checked?' checked':'')}}>{{=it[i].action[j].name}}</span>{{ } }}
+        </td>
+      </tr>{{ } }}</script>
+    </tbody>
+  </table>
+
+  <div>
+    <button name="grant">授权</button>
+  </div>
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/dot/1.0.3/doT.min.js"></script>
+<script src="../../js/libs/jQuery.QueryString/jquery.querystring.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/roles/access.js"></script>
+</body>
+</html>

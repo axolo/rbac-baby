@@ -1,0 +1,86 @@
+ul {
+  margin-bottom: 15px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  word-break: keep-all;
+}
+
+table, tr, th, td {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  font-size: 0.95em;
+}
+
+table {
+  margin: 10px 0;
+}
+
+th, td {
+  padding: 3px 5px;
+}
+
+.data, .page {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  word-break: break-all;
+}
+
+.form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.form .invalid {
+  padding-left: 10px;
+  color: #c00;
+}
+
+ul.inline {
+  margin: 0;
+  padding: 0;
+}
+
+ul.inline li {
+  display: inline-block;
+}
+
+ul.inline li.active a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+ul.pagination {
+  padding-left: 0;
+}
+
+ul.pagination li {
+  display: inline-block;
+}
+
+ul.pagination li.active a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.float-right {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  float: right;
+}
+
+.one-more {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.col {
+  display: inline-block;
+  width: 90px;
+  vertical-align: middle;
+}

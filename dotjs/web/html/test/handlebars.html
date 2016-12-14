@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Handlerbars</title>
+</head>
+<body>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>role</th>
+        <th>resource</th>
+        <th>action</th>
+      </tr>
+    </thead>
+    <tbody id="list"><script type="text/x-handlebars-template" id="data">{{#authorization}}
+      <tr>
+        <td>{{role}}</td>
+        <td>{{resource}}</td>
+        <td>{{action}}</td>
+        <td><button class="click">click</button></td>
+      </tr>{{/authorization}}</script>
+    </tbody>
+  </table>
+
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/handlebars.js/4.0.1/handlebars.min.js"></script>
+<script src="../../js/test/handlebars.js"></script>
+</body>
+</html>

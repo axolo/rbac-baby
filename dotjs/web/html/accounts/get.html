@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>帐号信息</title>
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+
+  <h3>帐号信息</h3>
+  <div>
+    <dl id="accounts-id"><script type="text/template" id="id">
+      <dt>帐号</dt>
+        <dd>{{=it.id}}</dd>
+      <dt>昵称</dt>
+        <dd>{{=it.name}}</dd>
+      <dt>令牌</dt>
+        <dd>{{=it.token}}</dd>
+      <dt>邮箱</dt>
+        <dd>{{=it.mail}}</dd>
+      <dt>手机</dt>
+        <dd>{{=it.phone}}</dd>
+      <dt>状态</dt>
+        <dd>{{=it.status}}</dd>
+      <dt>角色</dt>
+        <dd>{{=it.roles.join(', ')}}</dd>
+      <dt>创建</dt>
+        <dd>{{=it.created}}</dd>
+      <dt>到期</dt>
+        <dd>{{=it.expried}}</dd></script>
+    </dl>
+    <a href="list.html"><button>帐号列表</button></a>
+  </div>
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/dot/1.0.3/doT.min.js"></script>
+<script src="../../js/libs/jQuery.QueryString/jquery.querystring.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/accounts/id.js"></script>
+</body>
+</html>

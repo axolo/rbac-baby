@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>创建资源</title>
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+
+  <h4>创建资源</h4>
+
+  <div id="resources-create">
+    <form class="form">
+      <div>
+        <label for="name">名称</label>
+        <input type="text" name="name">
+      </div>
+      <div>
+        <label for="name">级别</label>
+        <input type="radio" name="level" value="kernel">核心
+        <input type="radio" name="level" value="plugin">插件
+        <input type="radio" name="level" value="app">应用
+      </div>
+      <div>
+        <label for="nick">昵称</label>
+        <input type="text" name="nick">
+      </div>
+      <div>
+        <label for="action">方法</label>
+        <div class="one-more">
+          <input type="text" name="action">
+        </div>
+        <button type="button" name="action-add">添加方法</button>
+        <button type="button" name="create">创建资源</button>
+      </div>
+    </form>
+  </div>
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/resources/create.js"></script>
+</body>
+</html>

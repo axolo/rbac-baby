@@ -1,0 +1,38 @@
+{
+  "name": "oa.hkled.com",
+  "version": "1.0.0",
+  "description": "oa.hkled.com",
+  "main": "index.html",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axolo/oa.hkled.com.git"
+  },
+  "keywords": [
+    "oa",
+    "hkled",
+    "axolo"
+  ],
+  "author": "YuemingFang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axolo/oa.hkled.com/issues"
+  },
+  "homepage": "https://github.com/axolo/oa.hkled.com#readme",
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "compression": "^1.6.2",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.1",
+    "crypto": "0.0.3",
+    "debug": "~2.2.0",
+    "ejs": "^2.5.2",
+    "express": "~4.13.4",
+    "morgan": "~1.7.0",
+    "mssql": "^3.3.0",
+    "mysql": "^2.12.0",
+    "serve-favicon": "~2.3.0"
+  }
+}

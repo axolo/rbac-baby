@@ -5,7 +5,7 @@ RBAC构思及相关实现
 - 用户(`account`)扮演(`mask`)的角色(`role`)对资源(`resource`)的操作(`method`)是否被授权(`access`)
 
 ### 多年前的参考
-- http://www.woodso.com/#/note/rbac
+- http://www.woodso.com/#/blog/rbac
 - 当年的源码不可寻，估计PHPChina上还有，有兴趣的自行查找
 
 ### 几个实现
